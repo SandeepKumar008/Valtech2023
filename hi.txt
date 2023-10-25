@@ -1,0 +1,2 @@
+Sandeep Created new directory and then we went into the directory by using cd valtech2023New , then performed cloning 
+by cloning command, then command od ls and go inside the folder then create txt file which is this

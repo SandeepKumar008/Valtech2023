@@ -1,0 +1,14 @@
+@charset "ISO-8859-1";
+.class1
+{
+background-color:#ffff00;
+border:5px;
+border-style:solid;
+border-color:#00ff00;
+border-radius:10px;
+width:250px;
+height:50px;
+font-family:Calibri;
+resize:both;
+overflow:hidden;
+}

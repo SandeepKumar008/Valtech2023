@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="mobile-rating-app/mobile-ranking/src/main/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/mobile-ranking/src/test/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/mobile-rating-ui/src/main/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/mobile-rating-ui/src/test/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/pattern-checker/src/main/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/pattern-checker/src/test/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/src/main/java"/>
+	<classpathentry kind="src" path="mobile-rating-app/src/test/java"/>
+	<classpathentry kind="lib" path="mobile-rating-app/mobile-ranking/target/mobile-ranking-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="mobile-rating-app/mobile-rating-ui/target/mobile-rating-ui/WEB-INF/lib/mobile-ranking-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="mobile-rating-app/mobile-rating-ui/target/mobile-rating-ui/WEB-INF/lib/pattern-checker-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="mobile-rating-app/pattern-checker/target/pattern-checker-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="mobile-rating-app/mobile-ranking/target/classes"/>
+</classpath>

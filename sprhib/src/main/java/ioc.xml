@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:beans xmlns:p="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-autowire="byType"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-3.2.xsd ">
+
+	<p:bean class="com.valtech.training.spring.UtilsBean">
+
+		<p:property name="points">
+			<p:map>
+				<p:entry key-ref="p1" value-ref="l1"></p:entry>
+				<p:entry key-ref="p2">
+					<p:ref bean="l2" />
+				</p:entry>
+				<p:entry>
+					<p:key>
+						<p:bean class="com.valtech.training.spring.Point"></p:bean>
+					</p:key>
+					<p:bean autowire="byName"
+						class="com.valtech.training.spring.Line"></p:bean>
+				</p:entry>
+
+			</p:map>
+		</p:property>
+		<p:property name="names">
+
+			<p:list>
+				<p:value>abc</p:value>
+				<p:value>456</p:value>
+				<p:value>True</p:value>
+			</p:list>
+
+		</p:property>
+
+		<p:property name="settings">
+			<p:props>
+				<p:prop key="jdbc.url">jdbc:mysql://localhost:3306/valtechoct2023
+				</p:prop>
+				<p:prop key="jdbc.username">Root</p:prop>
+				<p:prop key="jdbc.password">root</p:prop>
+			</p:props>
+		</p:property>
+
+	</p:bean>
+
+	<p:bean class="com.valtech.training.spring.ArithmeticImpl"></p:bean>
+	<p:bean class="com.valtech.training.spring.SimpleInterestImpl"></p:bean>
+
+
+	<p:bean id="l2" autowire="byName"
+		class="com.valtech.training.spring.Line"></p:bean>
+
+
+	<p:bean autowire="no" id="l1"
+		class="com.valtech.training.spring.Line">
+		<p:property name="start" ref="p1"></p:property>
+		<p:property name="end">
+			<p:ref local="p2" />
+		</p:property>
+	</p:bean>
+
+
+
+	<p:bean id="p2" name="end"
+		class="com.valtech.training.spring.Point">
+		<p:property name="x" value="100"></p:property>
+		<p:property name="y">
+			<p:value>200</p:value>
+		</p:property>
+	</p:bean>
+	<p:bean id="hw" name="abc,pqr"
+		class="com.valtech.training.spring.HelloWorld"></p:bean>
+	<p:bean id="p1" scope="prototype"
+		class="com.valtech.training.spring.Point">
+
+		<p:constructor-arg index="0" value="10"></p:constructor-arg>
+		<p:constructor-arg index="1" value="20"></p:constructor-arg>
+
+	</p:bean>
+</p:beans>

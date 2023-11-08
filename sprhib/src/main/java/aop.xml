@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<p:beans xmlns:p="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans spring-beans-3.2.xsd ">
+
+
+	<p:bean class="org.springframework.aop.framework.ProxyFactoryBean">
+		<p:property name="target">
+			<p:bean class="com.valtech.training.spring.ArithmeticImpl"></p:bean>
+		</p:property>
+		
+		<p:property name="interceptorNames">
+			<p:list>
+				<p:value>allInOneAdvise</p:value>
+				<p:value>counterAdvice</p:value>
+				<p:value>logReturnAdvice</p:value>
+				<p:value>exceptionHandlerAdvice</p:value>
+			</p:list>
+		</p:property>
+	</p:bean>
+	
+	<p:bean id="allInOneAdvise" class="com.valtech.training.spring.aop.AllInOneAdvise"></p:bean>
+	
+	<p:bean id = "counterAdvice" init-method="loadCounters" destroy-method="saveCounters" class="com.valtech.training.spring.aop.CounterAdvice"></p:bean>
+	
+	<p:bean id="logReturnAdvice" class="com.valtech.training.spring.aop.LogReturnAdvice"></p:bean>
+	
+	<p:bean id="exceptionHandlerAdvice" class="com.valtech.training.spring.aop.ExceptionHandlerAdvice"></p:bean>
+	
+	
+</p:beans>

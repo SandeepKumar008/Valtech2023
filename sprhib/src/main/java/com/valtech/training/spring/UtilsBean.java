@@ -5,13 +5,10 @@ import java.util.Map;
 import java.util.Properties;
 
 public class UtilsBean {
-
+	
 	private List<String> names;
 	private Properties settings;
 	private Map<Point, Line> points;
-	
-	
-	
 
 	public Map<Point, Line> getPoints() {
 		return points;
@@ -19,6 +16,10 @@ public class UtilsBean {
 
 	public void setPoints(Map<Point, Line> points) {
 		this.points = points;
+	}
+
+	public List<String> getNames() {
+		return names;
 	}
 
 	public Properties getSettings() {
@@ -29,13 +30,15 @@ public class UtilsBean {
 		this.settings = settings;
 	}
 
-	public java.util.List<String> getNames() {
-		return names;
-	}
-
-	public void setNames(java.util.List<String> names) {
+	public void setNames(List<String> names) {
 		this.names = names;
 	}
+
+	@Override
+	public String toString() {
+		return "UtilsBean [names=" + names + "]";
+	}
 	
 	
+
 }

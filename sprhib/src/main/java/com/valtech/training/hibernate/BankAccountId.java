@@ -8,16 +8,20 @@ import javax.persistence.Embeddable;
 
 @Embeddable
 public class BankAccountId implements Serializable {
-
+	
 	private String accountType;
 	private int accountNum;
 	
 	
-	
+	public BankAccountId() {}
+
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(accountNum, accountType);
 	}
+
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -29,9 +33,12 @@ public class BankAccountId implements Serializable {
 		BankAccountId other = (BankAccountId) obj;
 		return accountNum == other.accountNum && Objects.equals(accountType, other.accountType);
 	}
-	public BankAccountId() {
+
+
+	public BankAccountId(String accountType, int accountNum) {
 		super();
-		// TODO Auto-generated constructor stub
+		this.accountType = accountType;
+		this.accountNum = accountNum;
 	}
 	public String getAccountType() {
 		return accountType;
@@ -45,10 +52,9 @@ public class BankAccountId implements Serializable {
 	public void setAccountNum(int accountNum) {
 		this.accountNum = accountNum;
 	}
-	public BankAccountId(String accountType, int accountNum) {
-		super();
-		this.accountType = accountType;
-		this.accountNum = accountNum;
-	}
 	
+	
+	
+
+
 }

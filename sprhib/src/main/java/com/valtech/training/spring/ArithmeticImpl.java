@@ -23,6 +23,7 @@ public class ArithmeticImpl implements Arithmetic{
 		if(b==0) {
 			throw new DivideByZeroException("Zero cannot be used as denominator");
 		}
+		
 		return a/b;
 		
 	}

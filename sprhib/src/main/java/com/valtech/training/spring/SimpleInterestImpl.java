@@ -5,8 +5,6 @@ import java.util.Set;
 public class SimpleInterestImpl implements SimpleInterest {
 	
 	public SimpleInterestImpl() {
-		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	private Arithmetic arithmetic;
@@ -27,10 +25,8 @@ public class SimpleInterestImpl implements SimpleInterest {
 //		result = arithmetic.mul(result, duration);
 //		return arithmetic.div(result, 0);
 //		//ptr/100
-		
-		
 		try {
-			return arithmetic.div(result, 0);
+			return arithmetic.div(result, 1);
 		} catch (DivideByZeroException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

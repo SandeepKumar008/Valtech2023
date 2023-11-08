@@ -8,6 +8,15 @@ public class BankAccount {
 	@EmbeddedId
 	private BankAccountId id;
 	private double balance;
+	
+	
+	public BankAccount() {}
+	
+	public BankAccount(BankAccountId id, double balance) {
+		super();
+		this.id = id;
+		this.balance = balance;
+	}
 	public BankAccountId getId() {
 		return id;
 	}
@@ -20,15 +29,7 @@ public class BankAccount {
 	public void setBalance(double balance) {
 		this.balance = balance;
 	}
-	public BankAccount(BankAccountId id, double balance) {
-		super();
-		this.id = id;
-		this.balance = balance;
-	}
-	public BankAccount() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
 	
 	
+
 }
